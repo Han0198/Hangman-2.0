@@ -10,9 +10,9 @@ print("Lasset das Spiel beginnen!")
 time.sleep(3)
 
 
-class hangman:
-    def __init__(self, word):
-        self.word = word.upper()
+class hangman:                                                           #LV: Eine Klasse wird erschaffen/ ein Bauplan wird erstellt.
+    def __init__(self, word):                                            #LV: Mithilfe der init-Methode können wir den Zustand unseres Projekts definieren. Durch self wird bei der Initialiserung das Objekt auf sich selbst verwiesen.
+        self.word = word.upper()                                    
         self.shown = ""
         self.guessed = []
         self.step = 0
@@ -50,7 +50,7 @@ class hangman:
             print(i)
 
     def print_guessed(self):
-        if len(self.guessed) == 0:
+        if len(self.guessed) == 0:                                       #LV: Mit len kann die Länge des Projekts ausgegeben werden.
             print("Du hast noch keine Buchstaben geraten...")
         else:
             tried = "Bisher versuchte Buchstaben: "
